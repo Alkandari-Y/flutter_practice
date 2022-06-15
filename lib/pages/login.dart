@@ -9,7 +9,22 @@ class Login extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Column(),
+      body: Column(
+        children: [
+          Text('Login'),
+          ElevatedButton(
+            onPressed: () {},
+            child: Text('Login'),
+          ),
+          InkWell(
+              onTap: () {
+                Navigator.popAndPushNamed(context, '/auth/signup');
+                //link to flutter docs
+                //https://api.flutter.dev/flutter/widgets/Navigator/replace.html
+              },
+              child: Text('Need an account'))
+        ],
+      ),
     );
   }
 }
